@@ -25,7 +25,7 @@ export const loadUsers = () => {
 	return async (dispatch) => {
 		try {
 			const users = await axios.get(`${API_URL}/users`);
-			dispatch(loadedUsers(users));
+			dispatch(loadedUsers(users.data));
 		} catch (e) {
 			console.log(e);
 		}
